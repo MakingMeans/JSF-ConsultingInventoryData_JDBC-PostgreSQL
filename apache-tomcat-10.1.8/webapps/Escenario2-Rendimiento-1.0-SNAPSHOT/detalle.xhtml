@@ -12,7 +12,6 @@
 <h:body>
   <div class="app">
     <div class="card">
-      <!-- Header -->
       <div style="display:flex; justify-content:space-between; align-items:center;">
         <h3>Detalle de producto</h3>
         <div class="actions">
@@ -21,13 +20,11 @@
         </div>
       </div>
 
-      <!-- Metadata para cargar el producto -->
       <f:metadata>
         <f:viewParam name="id" value="#{detalleBean.id}" />
         <f:viewAction action="#{detalleBean.cargar}" />
       </f:metadata>
 
-      <!-- Detalle del producto -->
       <h:panelGroup rendered="#{not empty detalleBean.elemento}" styleClass="card" style="margin-top:12px;">
         <h4>#{detalleBean.elemento.nmbreElemnto}</h4>
         <div><span class="kv">ID:</span> #{detalleBean.elemento.id}</div>
@@ -39,7 +36,6 @@
         <div><span class="kv">Laboratorio:</span> #{detalleBean.elemento.lbrtorioElemnto}</div>
       </h:panelGroup>
 
-      <!-- Mensaje si no existe el producto -->
       <h:panelGroup rendered="#{empty detalleBean.elemento}">
         <div class="notice" style="margin-top:12px;">No se encontró el producto con el ID indicado.</div>
       </h:panelGroup>

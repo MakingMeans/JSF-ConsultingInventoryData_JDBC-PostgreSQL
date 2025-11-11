@@ -566,3 +566,13 @@
 0:0:0:0:0:0:0:1 - - [10/Nov/2025:22:14:33 -0500] "GET /Escenario2-Rendimiento/ HTTP/1.1" 200 1322
 0:0:0:0:0:0:0:1 - - [10/Nov/2025:22:14:59 -0500] "GET /Escenario2-Rendimiento/ HTTP/1.1" 200 1322
 0:0:0:0:0:0:0:1 - - [10/Nov/2025:22:21:26 -0500] "GET /Escenario2-Rendimiento/ HTTP/1.1" 200 1322
+0:0:0:0:0:0:0:1 - - [10/Nov/2025:23:14:12 -0500] "GET /Escenario2-Rendimiento/ HTTP/1.1" 200 1322
+0:0:0:0:0:0:0:1 - - [10/Nov/2025:23:14:17 -0500] "GET /Escenario2-Rendimiento/reportes.xhtml HTTP/1.1" 200 2303
+0:0:0:0:0:0:0:1 - - [10/Nov/2025:23:14:18 -0500] "POST /Escenario2-Rendimiento/reportes.xhtml HTTP/1.1" 200 7857
+0:0:0:0:0:0:0:1 - - [10/Nov/2025:23:14:20 -0500] "GET /Escenario2-Rendimiento/reportes.xhtml HTTP/1.1" 200 2303
+0:0:0:0:0:0:0:1 - - [10/Nov/2025:23:14:22 -0500] "GET /Escenario2-Rendimiento/index.xhtml HTTP/1.1" 200 1322
+0:0:0:0:0:0:0:1 - - [10/Nov/2025:23:14:22 -0500] "GET /Escenario2-Rendimiento/search_id.xhtml HTTP/1.1" 200 1767
+0:0:0:0:0:0:0:1 - - [10/Nov/2025:23:14:23 -0500] "POST /Escenario2-Rendimiento/search_id.xhtml HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Nov/2025:23:14:23 -0500] "GET /Escenario2-Rendimiento/search_id.xhtml?id=0 HTTP/1.1" 200 1764
+0:0:0:0:0:0:0:1 - - [10/Nov/2025:23:14:26 -0500] "POST /Escenario2-Rendimiento/search_id.xhtml HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Nov/2025:23:14:26 -0500] "GET /Escenario2-Rendimiento/search_id.xhtml?id=7576 HTTP/1.1" 200 2181

@@ -10,14 +10,14 @@
   <script type="text/javascript">
     function limpiarFormulario() {
         const form = document.getElementById('searchForm');
-        // Limpiar campos de texto
+
         form.querySelectorAll('input[type="text"], input[type="number"]').forEach(input => input.value = '');
-        // Ocultar resultados
+
         const results = document.getElementById('resultsPanel');
         if(results) {
             results.style.display = 'none';
         }
-        // Limpiar mensajes
+
         const messages = document.getElementById('messages');
         if(messages) {
             messages.innerHTML = '';
@@ -29,7 +29,7 @@
 <h:body>
   <div class="app">
     <div class="card">
-      <!-- Header -->
+
       <div style="display:flex; justify-content:space-between; align-items:center;">
         <h3>Buscar productos</h3>
         <div class="actions">
@@ -38,7 +38,6 @@
         </div>
       </div>
 
-      <!-- Formulario -->
       <h:form id="searchForm">
         <div class="form-row">
           <div class="field">
@@ -55,14 +54,12 @@
           </div>
           <div style="display:flex; align-items:flex-end; gap:8px;">
             <h:commandButton value="Buscar" action="#{productoBean.buscar}" styleClass="btn" />
-            <!-- Botón Limpiar funcional solo con JS -->
             <button type="button" onclick="limpiarFormulario()" class="btn ghost">Limpiar</button>
           </div>
         </div>
 
         <h:messages id="messages" />
 
-        <!-- Resultados -->
         <div id="resultsPanel" class="card" style="margin-top:12px;">
           <h4>Resultados</h4>
 

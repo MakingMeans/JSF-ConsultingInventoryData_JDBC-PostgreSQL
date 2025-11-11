@@ -2,7 +2,6 @@ package co.edu.unbosque.escenario2.beans;
 
 import co.edu.unbosque.escenario2.dao.ElementoDAO;
 import co.edu.unbosque.escenario2.model.Elemento;
-import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Named;
 import jakarta.faces.view.ViewScoped;
 import jakarta.faces.context.FacesContext;

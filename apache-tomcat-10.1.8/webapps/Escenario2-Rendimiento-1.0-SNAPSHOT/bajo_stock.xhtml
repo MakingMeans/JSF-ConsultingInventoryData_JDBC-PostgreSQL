@@ -11,7 +11,6 @@
 <h:body>
     <div class="app">
         <div class="card">
-            <!-- Encabezado con botones -->
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
                 <h3>Productos con bajo stock</h3>
                 <div class="actions">
@@ -20,14 +19,11 @@
                 </div>
             </div>
 
-            <!-- Form funcional -->
             <h:form>
-                <!-- Botón Cargar -->
                 <h:commandButton value="Cargar productos bajo stock" action="#{bajoStockBean.cargar}" styleClass="btn"/>
                 
                 <h:messages />
 
-                <!-- Tabla moderna -->
                 <h:dataTable value="#{bajoStockBean.productos}" var="p" styleClass="table" rendered="#{not empty bajoStockBean.productos}">
                     <h:column>
                         <f:facet name="header">ID</f:facet>
@@ -47,7 +43,6 @@
                     </h:column>
                 </h:dataTable>
 
-                <!-- Mensaje si no hay productos -->
                 <h:panelGroup rendered="#{empty bajoStockBean.productos}">
                     <div class="notice" style="margin-top:10px;">
                         No hay productos con bajo stock cargados. Presiona "Cargar".

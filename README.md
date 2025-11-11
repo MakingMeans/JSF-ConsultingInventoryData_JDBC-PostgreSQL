@@ -30,6 +30,12 @@ cd db
 docker compose up -d
 ```
 
+Para bajar la base de datos:
+
+```bash
+docker compose down --volumes
+```
+
 El contenedor expone el puerto 5433 en el host.
 Credenciales por defecto:
 ```text
@@ -78,8 +84,8 @@ target/Escenario2-Rendimiento.war
 
 4. Desplegar en Tomcat
 ```cmd
-copy target\Escenario2-Rendimiento-1.0-SNAPSHOT.war apache-tomcat-10.1.8\bin
-pache-tomcat-10.1.8\bin\startup.bat
+copy target\Escenario2-Rendimiento-1.0-SNAPSHOT.war apache-tomcat-10.1.8\webapps
+apache-tomcat-10.1.8\bin\startup.bat
 ```
 
 Acceder desde el navegador:
@@ -90,5 +96,5 @@ http://localhost:8080/Escenario2-Rendimiento/
 
 Para detener Tomcat:
 ```cmd
-Escenario2-Rendimiento\apache-tomcat-10.1.8\bin\shutdown.bat
+apache-tomcat-10.1.8\bin\shutdown.bat
 ```

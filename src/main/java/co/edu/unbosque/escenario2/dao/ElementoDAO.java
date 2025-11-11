@@ -2,7 +2,6 @@ package co.edu.unbosque.escenario2.dao;
 
 import co.edu.unbosque.escenario2.model.Elemento;
 import co.edu.unbosque.escenario2.model.Categoria;
-import co.edu.unbosque.escenario2.model.Unidad;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -65,7 +64,6 @@ public class ElementoDAO {
                     e.setNmbreElemnto(rs.getString("nmbre_elemnto"));
                     e.setLoteElemnto(rs.getString("lote_elemnto"));
 
-                    // ctgriaElemnto es objeto Categoria -> crear y poblar
                     int catId = rs.getInt("ctgria_elemnto");
                     if (!rs.wasNull()) {
                         Categoria cat = new Categoria();
@@ -74,11 +72,9 @@ public class ElementoDAO {
                         e.setCtgriaElemnto(cat);
                     }
 
-                    // unidad: en tu modelo guardas solo el id (short), si quieres el nombre, llenar Unidad
                     short und = rs.getShort("und_elemnto");
                     if (!rs.wasNull()) {
                         e.setUndElemnto(und);
-                        // si quieres mantener objeto Unidad dentro de Elemento, adapta tu modelo. Aquí solo se asigna el id (short)
                     }
 
                     e.setExstnciaElemnto(rs.getInt("exstncia_elemnto"));
@@ -94,7 +90,6 @@ public class ElementoDAO {
                     e.setStockMinimo(rs.getInt("stock_minimo"));
                     e.setStockMaximo(rs.getInt("stock_maximo"));
 
-                    // estdoElemnto es String en tu modelo (no char)
                     e.setEstdoElemnto(rs.getString("estdo_elmnto"));
 
                     lista.add(e);
