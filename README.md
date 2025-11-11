@@ -78,8 +78,8 @@ target/Escenario2-Rendimiento.war
 
 4. Desplegar en Tomcat
 ```cmd
-copy Escenario2-Rendimiento\target\Escenario2-Rendimiento-1.0-SNAPSHOT.war Escenario2-Rendimiento\apache-tomcat-10.1.8\bin
-Escenario2-Rendimiento\apache-tomcat-10.1.8\bin\startup.bat
+copy target\Escenario2-Rendimiento-1.0-SNAPSHOT.war apache-tomcat-10.1.8\bin
+pache-tomcat-10.1.8\bin\startup.bat
 ```
 
 Acceder desde el navegador:
