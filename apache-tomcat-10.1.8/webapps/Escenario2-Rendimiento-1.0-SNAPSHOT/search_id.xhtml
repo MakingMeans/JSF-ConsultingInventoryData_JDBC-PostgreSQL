@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+
+<h:head>
+  <title>Buscar producto por ID</title>
+  <h:outputStylesheet library="styles" name="main.css" />
+</h:head>
+
+<h:body>
+  <div class="app">
+    <div class="card">
+
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <h3>Buscar producto por ID</h3>
+        <div class="actions">
+          <h:button value="Inicio" outcome="index.xhtml" styleClass="btn ghost" />
+          <button type="button" onclick="history.back()" class="btn secondary">Atrás</button>
+        </div>
+      </div>
+
+      <f:metadata>
+        <f:viewParam name="id" value="#{detalleBean.id}" />
+        <f:viewAction action="#{detalleBean.cargar}" />
+      </f:metadata>
+
+      <h:form id="idForm">
+        <div class="form-row">
+          <div class="field">
+            <label>ID del producto</label>
+            <h:inputText value="#{detalleBean.id}" />
+          </div>
+
+          <div style="display:flex; align-items:flex-end; gap:8px;">
+            <h:commandButton value="Buscar"
+                             action="search_id?faces-redirect=true&amp;includeViewParams=true"
+                             styleClass="btn" />
+
+            <h:button value="Limpiar" outcome="search_id.xhtml" styleClass="btn ghost" />
+          </div>
+        </div>
+
+        <h:messages id="messages" />
+
+        <div id="resultArea" style="margin-top:12px;">
+          <h:panelGroup rendered="#{detalleBean.elemento != null}">
+            <h4>Resultado</h4>
+            <div><span class="kv">ID:</span> #{detalleBean.elemento.id}</div>
+            <div><span class="kv">Nombre:</span> #{detalleBean.elemento.nmbreElemnto}</div>
+            <div><span class="kv">SKU:</span> #{detalleBean.elemento.skuElemnto}</div>
+            <div><span class="kv">Lote:</span> #{detalleBean.elemento.loteElemnto}</div>
+            <div><span class="kv">Precio actual:</span> #{detalleBean.elemento.precioVentaAc}</div>
+            <div><span class="kv">Existencias:</span> #{detalleBean.elemento.exstnciaElemnto}</div>
+
+            <h:panelGroup rendered="#{detalleBean.elemento.ctgriaElemnto != null}">
+              <div><span class="kv">Categoría:</span> #{detalleBean.elemento.ctgriaElemnto.nmbreCtgria}</div>
+            </h:panelGroup>
+          </h:panelGroup>
+
+          <h:panelGroup rendered="#{detalleBean.elemento == null and not empty detalleBean.id}">
+            <div class="notice">No se encontró un producto con ese ID.</div>
+          </h:panelGroup>
+        </div>
+      </h:form>
+    </div>
+  </div>
+</h:body>
+</html>

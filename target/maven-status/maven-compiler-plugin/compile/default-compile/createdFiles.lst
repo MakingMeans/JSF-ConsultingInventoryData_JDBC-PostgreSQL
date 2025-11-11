@@ -1,0 +1,15 @@
+co\edu\unbosque\escenario2\dao\ElementoDAO.class
+co\edu\unbosque\escenario2\model\FacturaDetalle.class
+co\edu\unbosque\escenario2\model\Unidad.class
+co\edu\unbosque\escenario2\model\Categoria.class
+co\edu\unbosque\escenario2\dao\ConexionDB.class
+co\edu\unbosque\escenario2\dao\UnidadDAO.class
+co\edu\unbosque\escenario2\model\Elemento.class
+co\edu\unbosque\escenario2\model\ProductosMasVendidos.class
+co\edu\unbosque\escenario2\dao\ReporteDAO.class
+co\edu\unbosque\escenario2\model\Factura.class
+co\edu\unbosque\escenario2\beans\DetalleBean.class
+co\edu\unbosque\escenario2\beans\ProductoBean.class
+co\edu\unbosque\escenario2\beans\BajoStockBean.class
+co\edu\unbosque\escenario2\beans\ReporteBean.class
+co\edu\unbosque\escenario2\dao\CategoriaDAO.class
